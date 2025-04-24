@@ -54,12 +54,35 @@ adjusted R-squared = .03
 
 ## Exercise 2
 
-*Provide your answer here.*  
-Add code chunks as needed.
+> Fit a linear model (one you have fit before): m_bty_gen, predicting
+> average professor evaluation score based on average beauty rating
+> (bty_avg) and gender. Write the linear model, and note the R-squared
+> and the adjusted R-squared.
 
 ``` r
-# Add your R code here
+m_bty_gen <- summary(lm(score ~ bty_avg + gender, data = evals))
+m_bty_gen
 ```
+
+    ## 
+    ## Call:
+    ## lm(formula = score ~ bty_avg + gender, data = evals)
+    ## 
+    ## Residuals:
+    ##     Min      1Q  Median      3Q     Max 
+    ## -1.8305 -0.3625  0.1055  0.4213  0.9314 
+    ## 
+    ## Coefficients:
+    ##             Estimate Std. Error t value Pr(>|t|)    
+    ## (Intercept)  3.74734    0.08466  44.266  < 2e-16 ***
+    ## bty_avg      0.07416    0.01625   4.563 6.48e-06 ***
+    ## gendermale   0.17239    0.05022   3.433 0.000652 ***
+    ## ---
+    ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+    ## 
+    ## Residual standard error: 0.5287 on 460 degrees of freedom
+    ## Multiple R-squared:  0.05912,    Adjusted R-squared:  0.05503 
+    ## F-statistic: 14.45 on 2 and 460 DF,  p-value: 8.177e-07
 
 ## Additional Exercises
 
