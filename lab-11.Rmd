@@ -1,7 +1,7 @@
 ---
 title: "Lab 11 - Grading the professor, Pt. 2"
-author: "Insert your name here"
-date: "Insert date here"
+author: "Noah Booker"
+date: "4/24/25"
 output: github_document
 ---
 
@@ -13,14 +13,24 @@ library(tidymodels)
 library(openintro)
 ```
 
+# Part 1: Simple linear regression
+
 ## Exercise 1
 
-*Provide your answer here.*  
-Add code chunks as needed. Ensure code chunks are properly labeled without spaces.
+> Fit a linear model (one you have fit before): m_bty, predicting average professor evaluation score based on average beauty rating (bty_avg) only. Write the linear model, and note the R-squared and the adjusted R-squared.
 
-```{r exercise1_code}
-# Add your R code here
+```{r m_bty}
+m_bty <- summary(lm(score ~ bty_avg, data = evals))
+m_bty
 ```
+
+score = 3.89 + .07 x bty_avg + error
+
+R-squared = .04
+
+adjusted R-squared = .03
+
+# Part 2: Multiple linear regression
 
 ## Exercise 2
 
