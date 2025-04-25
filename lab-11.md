@@ -84,6 +84,82 @@ m_bty_gen
     ## Multiple R-squared:  0.05912,    Adjusted R-squared:  0.05503 
     ## F-statistic: 14.45 on 2 and 460 DF,  p-value: 8.177e-07
 
-## Additional Exercises
+score = 3.75 + 0.07 x bty_avg + 0.17 x gendermale + error
 
-*Repeat the format above for additional exercises.*
+R-squared = .06
+
+Adjusted R-squared = .06
+
+## Exercise 3
+
+> Interpret the slope and intercept of m_bty_gen in context of the data.
+
+The intercept, 3.74, represents the predicted evaluation score for a
+professor who has an average beauty rating of 0 and is female.
+
+The slopes indicate that, when controlling for gender (i.e., when
+comparing professors of the same gender), a 1-unit increase in average
+beauty score is associated with a .07 point increase in evaluation
+scores and that, when controlling for average beauty rating, male
+professors, on average, have a an evaluation score that is .17 points
+greater than the average female professor.
+
+## Exercise 4
+
+> What percent of the variability in score is explained by the model
+> m_bty_gen.
+
+Since this is a multiple regression, I would refer to the adjusted
+R-squared, which indicates that the model explains about 5.5% of
+variance in evaluation scores.
+
+## Exercise 5
+
+> What is the equation of the line corresponding to just male
+> professors?
+
+score = 3.75 + 0.07 x bty_avg + 0.17 x (1) + error
+
+score = 3.92 + 0.07 x bty_avg + error
+
+## Exercise 6
+
+> For two professors who received the same beauty rating, which gender
+> tends to have the higher course evaluation score?
+
+The male professor. This is indicated by the positive coefficient for
+the “gendermale” term in the model which also includes beauty rating as
+a predictor.
+
+## Exercise 7
+
+> How does the relationship between beauty and evaluation score vary
+> between male and female professors?
+
+We cannot know from the current model whether the relatationship between
+beauty and evaluation score varies by gender. To answer that question,
+we would need a regression model with an interaction term (i.e.,
+gendermale\*bty_avg). The current model can only tell us the
+relationship between beauty and evaluation scores when statistically
+controlling for gender.
+
+“The current model assumes that the relationship between beauty rating
+and evaluation scores is the same for both genders \[…\] The current
+model forces both gender groups to have the same slope (0.07), even
+though the true slopes might differ,” (Claude.ai).
+
+## Exercise 8
+
+> How do the adjusted R-squared values of m_bty_gen and m_bty compare?
+> What does this tell us about how useful gender is in explaining the
+> variability in evaluation scores when we already have information on
+> the beauty score of the professor.
+
+Adjusted R-squared for m_bty is .03 while the adjusted R-squared for
+m_bty_gender is .06. This indicates that adding gender out model doubles
+the amount of variance in evaluation scores explained by the model. In
+other words, it is useful to know about the gender of the professor if
+we want to predict evaluation scores, even if we already know about the
+professors beauty score.
+
+## Exercise 9
